@@ -1,0 +1,32 @@
+?- consult(['c:/Users/subha/Downloads/cs331/230101098_assignment2/230101098.pl']).
+true.
+
+?- split([3,-1,0,5,-2], P, N).
+P = [3, 0, 5],
+N = [-1, -2] .
+
+?- split_cut([3,-1,0,5,-2], P, N).
+P = [3, 0, 5],
+N = [-1, -2].
+
+?- route(aizawl, guwahati, R).
+R = [aizawl, agartala, silchar, haflong, lumding, nagaon, guwahati] .
+
+?- route(aizawl, silchar, R).
+R = [aizawl, agartala, silchar] .
+
+?- number_of_parents(joe,2).
+true.
+
+?- number_of_parents(adam,2).
+false.
+
+?- number_of_parents(joe,0).
+false.
+
+?- number_of_parents(adam,N).
+N = 0 .
+
+?- number_of_parents(X,0).
+X = adam ;
+X = eve .

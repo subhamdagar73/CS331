@@ -1,0 +1,21 @@
+?- consult(['c:/Users/subha/Downloads/cs331/230101098_assignment1/Assignment1_230101098.pl']).
+true.
+
+?- flatten([a, [b, [c, d]], e], X).
+X = [a, b, c, d, e] .
+
+?- translate([9, 1, 1], X).
+X = [nine, one, one].
+
+?- joe was the head of the department.
+true.
+
+?- subsum([1, 2, 3, 4], 5, X).
+X = [1, 4] ;
+X = [2, 3] .
+
+?- between(5, 8, X).
+X = 5 ;
+X = 6 ;
+X = 7 ;
+X = 8 .

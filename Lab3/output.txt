@@ -1,0 +1,50 @@
+?- consult(['c:/Users/subha/Downloads/cs331/230101098_assignment3/230101098.pl']).
+true.
+
+?- gen_test(4, Sol).
+Sol = [2, 4, 1, 3] ;
+Sol = [3, 1, 4, 2] ;
+false.
+
+?-  prune_first(4, Sol).
+Sol = [2, 4, 1, 3] ;
+Sol = [3, 1, 4, 2] ;
+false.
+
+?- smart_search(4, Sol, []).
+Sol = [2, 4, 1, 3] ;
+Sol = [3, 1, 4, 2] ;
+false.
+
+?- smart_search(8, Sol, [ff]), !.
+Sol = [1, 5, 8, 6, 3, 7, 2, 4].
+
+?- findall(S, smart_search(8, S, [ff]), Solutions), length(Solutions, Count).
+Solutions = [[1, 5, 8, 6, 3, 7, 2, 4], [1, 6, 8, 3, 7, 4, 2|…], [1, 7, 4, 6, 8, 2|…], [1, 7, 5, 8, 2|…], [2, 4, 6, 8|…], [2, 5, 7|…], [2, 5|…], [2|…], […|…]|…],
+Count = 92.
+
+?- time(gen_test(6, Sol)).
+% 3,973,996 inferences, 0.109 CPU in 0.124 seconds (88% CPU, 36333678 Lips)
+Sol = [2, 4, 6, 1, 3, 5] ;
+% 3,385,922 inferences, 0.109 CPU in 0.109 seconds (100% CPU, 30957001 Lips)
+Sol = [3, 6, 2, 5, 1, 4] ;
+% 867,533 inferences, 0.031 CPU in 0.028 seconds (113% CPU, 27761056 Lips)
+Sol = [4, 1, 5, 2, 6, 3] ;
+% 3,385,921 inferences, 0.109 CPU in 0.103 seconds (106% CPU, 30956992 Lips)
+Sol = [5, 3, 1, 6, 4, 2] ;
+% 3,972,017 inferences, 0.109 CPU in 0.124 seconds (88% CPU, 36315584 Lips)
+false.
+
+
+?- time(smart_search(6, Sol, [ff])).
+% 13,590 inferences, 0.000 CPU in 0.001 seconds (0% CPU, Infinite Lips)
+Sol = [2, 4, 6, 1, 3, 5] ;
+% 9,136 inferences, 0.000 CPU in 0.001 seconds (0% CPU, Infinite Lips)
+Sol = [3, 6, 2, 5, 1, 4] ;
+% 3,559 inferences, 0.000 CPU in 0.001 seconds (0% CPU, Infinite Lips)
+Sol = [4, 1, 5, 2, 6, 3] ;
+% 9,210 inferences, 0.000 CPU in 0.001 seconds (0% CPU, Infinite Lips)
+Sol = [5, 3, 1, 6, 4, 2] ;
+% 7,191 inferences, 0.000 CPU in 0.001 seconds (0% CPU, Infinite Lips)
+false.
+
