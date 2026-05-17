@@ -205,28 +205,6 @@ ghci Assignment_5.hs
 
 ---
 
-## Learning Outcomes
-
-By completing this course, you will understand:
-
-✓ How different programming paradigms approach problem solving  
-✓ Trade-offs between expressiveness and safety  
-✓ Concurrency challenges and synchronization techniques  
-✓ Functional approaches to data structures and algorithms  
-✓ Type systems and their benefits for program correctness  
-✓ Performance considerations in different paradigms  
-
----
-
-## Resources and References
-
-- **Prolog**: SWI-Prolog documentation, logic programming fundamentals
-- **Java**: Effective Java, Java Concurrency in Practice
-- **Haskell**: Learn You a Haskell, Real World Haskell
-- **Concurrency**: The Little Book of Semaphores, Java Memory Model
-
----
-
 ## Design Patterns and Best Practices
 
 ### Prolog
@@ -248,10 +226,3 @@ By completing this course, you will understand:
 
 ---
 
-## Contact & Submission
-
-For questions or clarifications regarding the assignments, refer to the individual lab READMEs and DESIGN documents.
-
----
-
-**Last Updated**: May 2026
